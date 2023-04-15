@@ -1,0 +1,213 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  position: relative;
+
+  background-image: url("./assets/bg.png");
+  background-color: #40306c;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+::selection {
+  color: #fff;
+  background: #4D59FB;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  right: 12%;
+  transform: translate(-50%, -50%);
+  width: 420px;
+  padding: 25px 28px 45px;
+
+  color: #2d2d2d;
+  background: rgba(233, 186, 190, 0.796);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.wrapper header {
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.sub-title {
+  font-size: 17px;
+  text-align: center;
+}
+
+.wrapper .search {
+  position: relative;
+  margin: 35px 0 18px;
+}
+
+.search input {
+  height: 53px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 0 42px;
+  border: 1px solid #999;
+  background: #dbdbdb;
+}
+
+.search input:focus {
+  padding: 0 41px;
+  background: #f5f5f5;
+  border: 2px solid #2A265B;
+}
+
+.search input::placeholder {
+  color: #4b4b4b;
+}
+
+.search :where(i, span) {
+  position: absolute;
+  top: 50%;
+  color: #696969;
+  transform: translateY(-50%);
+}
+
+.search i {
+  left: 18px;
+  pointer-events: none;
+  font-size: 16px;
+}
+
+.search input:focus~i {
+  color: #2A265B;
+}
+
+.search span {
+  right: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  display: none;
+}
+
+.search input:valid~span {
+  display: block;
+}
+
+.material-icons {
+  color: #000;
+}
+
+.wrapper .info-text {
+  font-size: 14px;
+  color: #303030 !important;
+  margin: -3px 0 -10px;
+}
+
+.wrapper.active .info-text {
+  display: none;
+}
+
+.info-text span {
+  font-weight: 500;
+}
+
+.wrapper ul {
+  height: 0;
+  opacity: 0;
+  padding-right: 1px;
+  overflow-y: hidden;
+  transition: all 0.2s ease;
+}
+
+.wrapper.active ul {
+  opacity: 1;
+  height: 303px;
+}
+
+.wrapper ul li {
+  display: flex;
+  list-style: none;
+  margin-bottom: 14px;
+  align-items: center;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #000;
+  justify-content: space-between;
+}
+
+ul li:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+ul .word p {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+ul .word span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2A265B;
+}
+
+ul .word i {
+  color: #2b2b2b;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+ul .content {
+  max-height: 215px;
+  overflow-y: auto;
+}
+
+ul .content::-webkit-scrollbar {
+  color: #595959;
+  width: 0px;
+}
+
+.content li .details {
+  padding-left: 10px;
+  border-radius: 4px 0 0 4px;
+  border-left: 3px solid #2A265B;
+}
+
+.content li p {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.content li span {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #2A265B;
+}
+
+.content .synonyms .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content .synonyms span {
+  cursor: pointer;
+  margin-right: 5px;
+  text-decoration: underline;
+}
